@@ -1,0 +1,52 @@
+{
+  "CLWE80976": {
+    "product-name": "Coins On Me",
+    "product-stock": {
+      "XS": 72,
+      "S": 136,
+      "M": 2,
+      "L": 73,
+      "XL": 11
+    }
+  },
+  "CLWE80865": {
+    "product-name": "Control It All",
+    "product-stock": {
+      "XS": 118,
+      "S": 81,
+      "M": 92,
+      "L": 20,
+      "XL": 3
+    }
+  },
+  "CLWE91255": {
+    "product-name": "King's Mark - Silver",
+    "product-stock": {
+      "XS": 42,
+      "S": 10,
+      "M": 133,
+      "L": 86,
+      "XL": 76
+    }
+  },
+  "CLWE83323": {
+    "product-name": "Tough Girl - White",
+    "product-stock": {
+      "XS": 42,
+      "S": 60,
+      "M": 21,
+      "L": 29,
+      "XL": 83
+    }
+  },
+  "CLWE83185": {
+    "product-name": "Wait For Me",
+    "product-stock": {
+      "XS": 93,
+      "S": 57,
+      "M": 147,
+      "L": 132,
+      "XL": 10
+    }
+  }
+}
