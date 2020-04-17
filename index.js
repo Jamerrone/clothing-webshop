@@ -24,13 +24,17 @@ app.get("/", (req, res) => {
 
 app.post("/webhook", (req, res) => {
   const requestedProduct =
-    req.body.result && req.body.result.parameters && req.body.result.parameters["product-number"]
-      ? req.body.result.parameters["product-number"]
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters["product-number"]
+      ? req.body.queryResult.parameters["product-number"]
       : "";
 
   const requestedSize =
-    req.body.result && req.body.result.parameters && req.body.result.parameters["size"]
-      ? req.body.result.parameters["size"]
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters["product-size"]
+      ? req.body.queryResult.parameters["product-size"]
       : "";
 
   if (requestedProduct && productsDB.hasOwnProperty(requestedProduct)) {
