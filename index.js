@@ -12,7 +12,7 @@ function formatStock(productStock) {
   let result = [];
 
   for (let [key, value] of Object.entries(productStock)) {
-    result.push(`${key}[${value}]`);
+    result.push(`${key}(${value})`);
   }
 
   return result.join(", ");
@@ -39,9 +39,9 @@ app.post("/webhook", (req, res) => {
 
   if (requestedProduct && productsDB.hasOwnProperty(requestedProduct)) {
     return res.json({
-      fulfillmentText: `"${productsDB[requestedProduct]["product-name"]}" Stock: ${
+      fulfillmentText: `${productsDB[requestedProduct]["product-name"]} Stock: ${
         requestedSize
-          ? `${requestedSize}[${productsDB[requestedProduct]["product-stock"][requestedSize]}]`
+          ? `${requestedSize}(${productsDB[requestedProduct]["product-stock"][requestedSize]})`
           : formatStock(productsDB[requestedProduct]["product-stock"])
       }`,
       source: "webhook",
